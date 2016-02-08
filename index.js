@@ -50,7 +50,7 @@ var api = {
                 return;
             }
             
-            callback({date: data.date, rate: data.rates[currency].value, unit: data.rates[currency].unit, currency: currency});
+            callback(null, {date: data.date, rate: data.rates[currency].value, unit: data.rates[currency].unit, currency: currency});
         });
     }
 }
