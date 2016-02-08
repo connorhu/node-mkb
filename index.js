@@ -52,8 +52,8 @@ var api = {
             
             callback(null, {
                 date: data.date,
-                rate: selectedRate.rate,
-                unit: selectedRate.unit,
+                rate: data.rate,
+                unit: data.unit,
                 currency: currency
             });
         });
