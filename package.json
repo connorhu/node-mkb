@@ -1,6 +1,6 @@
 {
   "name": "mkb",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "HUF currency rate converter based on web service of MKB",
   "main": "index.js",
   "dependencies": {

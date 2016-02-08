@@ -29,8 +29,8 @@ var api = {
                 for (var i = 0; i < rates.length; i++) {
                     var currency = rates[i].attr('curr').value();
                     data.rates[currency] = {
-                        unit: rates[i].attr('unit').value(),
-                        value: rates[i].text()
+                        unit: rates[i].attr('unit').value() * 1,
+                        rate: parseFloat(rates[i].text().replace(',', '.'))
                     };
                 }
         
@@ -50,7 +50,12 @@ var api = {
                 return;
             }
             
-            callback(null, {date: data.date, rate: data.rates[currency].value, unit: data.rates[currency].unit, currency: currency});
+            callback(null, {
+                date: data.date,
+                rate: selectedRate.rate,
+                unit: selectedRate.unit,
+                currency: currency
+            });
         });
     }
 }
